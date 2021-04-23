@@ -1,0 +1,46 @@
+! foot pedal
+
+dir browser
+  Directory navigation
+    * show which page you are on
+  indicator when you clicked on something (maybe cursor turns into clock symbol?)
+
+test when sd card not inserted
+
+refactor tab viewer loop, so it's not inside main loop()
+
+tab viewer
+  convert "4-----L" and "4----(4)" holds to fat bars
+  show raw text file
+    * see authors, legends, notes etc
+  when no annotations, lines are too close together: carcassi_op60_no07_study_in_am.txt
+  ? better line break logic
+  ? show chords/lyrics mode
+  ? parse out tuning, and tempo metadata
+
+menu
+  hide annotations
+  font size
+  rotation
+  show raw text
+  about/version
+  ? add to favourites
+
+bugs
+  ! cut off tab parsing when Legend etc seen
+
+weird renders
+  carcassi op60 no3: beginning messed up, vertical bars cut on A string? ack... barre holds are also "---"
+  anon_greensleeves: has EADGBE in middle of bars
+  sor_op31_no05_in_g_andantino.tx: spaces after EADGBE
+  barrios_maxixe: numbers run together: 12109
+
+power management
+  battery indicator as percentage
+  ? deep sleep
+    on idle, with indicator, or maybe all the time
+
+playlists
+  * maybe just cp into a dir?
+  ? recently loaded tabs
+  ? favourites
