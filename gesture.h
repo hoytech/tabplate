@@ -30,6 +30,8 @@ static int getGesture() {
         bool p1 = display.readTouchpad(PAD1);
         bool p2 = display.readTouchpad(PAD2);
         bool p3 = display.readTouchpad(PAD3);
+        bool p4 = display.digitalReadMCP(13);
+        if (!p4) p3 = true;
         
         if (gestureState == GESTURE_STATE_NONE) {
             if (p1) gestureState = GESTURE_STATE_PAD1_PRESSED;

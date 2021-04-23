@@ -59,6 +59,9 @@ void setup() {
     */
 
     display.begin();
+
+    display.pinModeMCP(13, INPUT_PULLUP); // 13 = GPB5, for optional foot-pedal
+
     display.setRotation(0);
     setCursor(mainFont, 0, 0);
 
@@ -101,7 +104,7 @@ void loop() {
 
     int gesture = getGesture();
 
-    if (gesture == GESTURE_UP) selectedPage--;
+    if (gesture == GESTURE_UP || gesture == GESTURE_DOWN_LONG) selectedPage--;
     else if (gesture == GESTURE_DOWN) selectedPage++;
     else if (gesture == GESTURE_SELECT) {
       chooseTab();
